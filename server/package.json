@@ -1,0 +1,27 @@
+{
+  "name": "IT20235574",
+  "version": "1.0.0",
+  "description": "IT20235574",
+  "main": "app.js",
+  "scripts": {
+    "server": "nodemon server --ignore client",
+    "client": "npm start --prefix ../client",
+    "start": "concurrently --kill-others-on-fail \"npm run server\" \" npm run client\""
+  },
+  "keywords": [
+    "Koa",
+    "Node"
+  ],
+  "author": "Dilupa Gimhan Girambe",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^2.13.4",
+    "koa-bodyparser": "^4.3.0",
+    "koa-json": "^2.0.2",
+    "koa-router": "^10.1.1"
+  },
+  "devDependencies": {
+    "concurrently": "^7.1.0",
+    "nodemon": "^2.0.16"
+  }
+}
