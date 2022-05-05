@@ -68,10 +68,54 @@ const editItems = async (ctx) => {
 };
 
 
+
+// wishList middleware
+const addToWishList = async (ctx) => {
+  var uin = ctx.request.body;
+  var id = wishList.find((item)=>item.id==uin.id)
+
+  if(id){
+    console.log('already exists in wishlist');
+    ctx.body = 'Added to wishList'
+  }else{
+    wishList.push({...uin});
+    ctx.body = 'Added to wishList'
+  }
+  
+  
+};
+
+const getWishList = async (ctx) => {
+  ctx.body = wishList;
+};
+
+
+
+// cart middleware
+const addToCart = async (ctx) => {
+  var uin = ctx.request.body;
+  const cid = new Date().getTime().toString()
+  var id = cart.find((item)=>item.id==uin.id)
+
+  if(id){
+    console.log('already exists in wishlist');
+    ctx.body = 'Added'
+  }else{
+    cart.push({...uin,cid});
+    ctx.body = 'Added to cart'
+  }
+     
+};
+const getCart = async (ctx) => {
+  ctx.body = cart;
+};
+
+
+
+
 //userRoutes
 router.get("/getUsers", getUser);
 router.post("/addUser", addUser);
-
 
 
 //itemRoutes
@@ -80,8 +124,14 @@ router.post("/addItems", addItems);
 router.post("/editItems",editItems)
 
 
+//wishListRoutes
+router.get("/getWishList", getWishList);
+router.post("/addToWishList", addToWishList);
 
 
+//CartRoutes
+router.get("/getCart", getCart);
+router.post("/addToCart", addToCart);
 
 
 

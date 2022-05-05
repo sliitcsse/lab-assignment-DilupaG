@@ -7,14 +7,8 @@ import AddPromotion from "./AddPromotion";
 import ViewPromotions from "./ViewPromotions";
 import CustomerList from "./CustomerList";
 import CustomerHome from "./CustomerHome";
+import ViewCart from "./ViewCart";
+import ViewWishList from "./ViewWishList";
 
 
-
-
-
-
-
-
-
-
-export { UsersHome, CreateProfile, TradersHome, AddItem, EditItem, AddPromotion, ViewPromotions, CustomerList, CustomerHome }
+export { UsersHome, CreateProfile, TradersHome, AddItem, EditItem, AddPromotion, ViewPromotions, CustomerList, CustomerHome, ViewCart, ViewWishList }
