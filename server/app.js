@@ -11,7 +11,8 @@ app.use(bodyParser());
 
 //arrays
 var users = [
-  { id:"0", name: "Dilupa", email: "dilupa@gmail.com", phone: "0767008955", type: "Customer" }
+  { id:"0", name: "Dilupa", email: "dilupa@gmail.com", phone: "0767008955", type: "Customer" },
+  { id:"1011", name: "Poorna", email: "poorna@gmail.com", phone: "0767032955", type: "Trader" }
 ];
 
 var items = [
