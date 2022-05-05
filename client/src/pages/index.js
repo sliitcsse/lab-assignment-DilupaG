@@ -6,6 +6,7 @@ import EditItem from "./EditItem";
 import AddPromotion from "./AddPromotion";
 import ViewPromotions from "./ViewPromotions";
 import CustomerList from "./CustomerList";
+import CustomerHome from "./CustomerHome";
 
 
 
@@ -15,4 +16,5 @@ import CustomerList from "./CustomerList";
 
 
 
-export { UsersHome, CreateProfile, TradersHome, AddItem, EditItem, AddPromotion, ViewPromotions, CustomerList,  }
+
+export { UsersHome, CreateProfile, TradersHome, AddItem, EditItem, AddPromotion, ViewPromotions, CustomerList, CustomerHome }

@@ -1,6 +1,6 @@
 import React from "react";
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
-import {UsersHome, CreateProfile, TradersHome, AddItem, EditItem, AddPromotion, ViewPromotions, CustomerList } from './pages';
+import {UsersHome, CreateProfile, TradersHome, AddItem, EditItem, AddPromotion, ViewPromotions, CustomerList, CustomerHome } from './pages';
 
 const App = () => {
   return (
@@ -14,6 +14,7 @@ const App = () => {
         <Route path="/promoteItem/:id/:name/:count/:price/:category/:promotion" element={<AddPromotion/>}/>
         <Route path="/viewPromotion" element={<ViewPromotions/>}/>
         <Route path="/customerList" element={<CustomerList/>}/>
+        <Route path='/customersHome' element={<CustomerHome/>}/>
 
       </Routes>
     </BrowserRouter>
