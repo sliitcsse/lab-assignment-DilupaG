@@ -1,10 +1,15 @@
-import React from 'react'
+import React from "react";
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import {UsersHome, CreateProfile} from './pages';
 
 const App = () => {
   return (
-    <div>
-      <h1>hi hi from client</h1>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<UsersHome/>}/>
+        <Route path="/createProfile" element={<CreateProfile/>}/>
+      </Routes>
+    </BrowserRouter>
   )
 }
 
